@@ -13,6 +13,10 @@ dist/
 build/
 *.zip
 
+# Explicitly track the small public installation archives
+!downloads/
+!downloads/*.zip
+
 # Avoid accidental inclusion of local secrets
 .env
 .env.*

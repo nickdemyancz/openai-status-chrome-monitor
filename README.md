@@ -21,15 +21,20 @@ This independent project reads the [OpenAI Status](https://status.openai.com/) p
 
 The toolbar icon shows the **overall status** reported by OpenAI. The selected component list controls the popup only; individual user experiences may differ from OpenAI's aggregate status.
 
-## Install locally
+## Download and install
 
-1. Download the source as a ZIP from GitHub and extract it, or clone this repository.
-2. In Google Chrome, open `chrome://extensions`.
-3. Enable **Developer mode**.
-4. Select **Load unpacked** and choose the folder containing `manifest.json`.
-5. Pin the extension to your toolbar if desired.
+**Chrome Web Store publication is planned, but the extension is not listed there yet.**
 
-To view the settings, click the extension icon, then click the gear button.
+Download a ready-to-install ZIP archive from this repository:
+
+| Version | Status | Language |
+| --- | --- | --- |
+| [v0.1.3 — stable](downloads/openai-status-chrome-monitor-v0.1.3.zip) | Matches the current source code on `main` | Russian |
+| [v0.1.4 — preview](downloads/openai-status-chrome-monitor-v0.1.4-preview.zip) | Translation preview; source review and merge pending | English, Russian, Czech |
+
+**Quick installation:** download the ZIP, extract it, open `chrome://extensions`, enable **Developer mode**, click **Load unpacked**, and select the extracted folder containing `manifest.json`.
+
+See **[INSTALL.md](INSTALL.md)** for screenshots-independent step-by-step instructions, updating an existing unpacked extension, and troubleshooting. GitHub ZIP installations do **not** update automatically.
 
 ## Privacy and permissions
 
@@ -67,7 +72,7 @@ assets/               Repository documentation images
 
 - Automatic checks are approximate: Chrome does not wake a sleeping computer to run an alarm.
 - The component catalog and its display grouping depend on the public status API, which OpenAI can change.
-- The interface is currently in Russian. English (default), Russian, and Czech localization are planned for a future release.
+- The current `main` source (v0.1.3) uses Russian UI. A separate **v0.1.4 preview ZIP** includes English, Russian, and Czech, with browser-language detection and a manual selector; its updated source code has not yet been merged into `main`.
 
 ## Contributing and license
 
@@ -75,4 +80,10 @@ This is an early personal project. Feedback via GitHub Issues is welcome. **No o
 
 ## Releases
 
-The first repository version is **v0.1.3**. See [Changelog](CHANGELOG.md).
+The source on `main` is **v0.1.3**. The separately downloadable **v0.1.4 preview** is provided for early testing; its source integration is still pending. See [Changelog](CHANGELOG.md).
+
+## Planned Chrome Web Store release
+
+Publication in the **Chrome Web Store is planned; no launch date has been announced**. The extension can currently be installed from the GitHub ZIP files using Chrome Developer mode. Preparation includes real-Chrome testing, localization review, store listing material, privacy and permission review, and Google's publication process.
+
+See [ROADMAP.md](ROADMAP.md) for the preparation checklist. This is an independent project, **not an official OpenAI extension**.
