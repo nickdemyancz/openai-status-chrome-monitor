@@ -1,0 +1,19 @@
+# Editor, OS and local temporary files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*.swp
+*~
+
+# Dependencies and local build output (not required by this project)
+node_modules/
+dist/
+build/
+*.zip
+
+# Avoid accidental inclusion of local secrets
+.env
+.env.*
+!.env.example

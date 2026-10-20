@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "OpenAI Status Monitor",
+  "short_name": "OpenAI Status",
+  "version": "0.1.3",
+  "description": "Minimalist OpenAI service health indicator with a customizable component list.",
+  "permissions": [
+    "alarms",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://status.openai.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "OpenAI Status — нет данных",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/gray16.png",
+      "32": "icons/gray32.png",
+      "48": "icons/gray48.png"
+    }
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "icons/brand16.png",
+    "32": "icons/brand32.png",
+    "48": "icons/brand48.png",
+    "128": "icons/brand128.png"
+  }
+}

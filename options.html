@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Настройки · OpenAI Status Monitor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="options-page">
+  <main class="options-shell">
+    <header class="options-header">
+      <div class="eyebrow">OpenAI Status Monitor</div>
+      <h1>Настройки</h1>
+      <p class="intro">Выберите службы для popup и периодичность обновления статуса.</p>
+    </header>
+
+    <form id="settings-form">
+      <section class="settings-card">
+        <div class="settings-card-heading">
+          <div>
+            <h2>Периодичность проверки</h2>
+            <p>Проверка запускается автоматически, пока Chrome работает.</p>
+          </div>
+        </div>
+        <select id="interval" name="interval" aria-label="Интервал обновления">
+          <option value="5">Каждые 5 минут</option>
+          <option value="30">Каждые 30 минут</option>
+          <option value="60">Каждые 60 минут</option>
+          <option value="0">Только вручную</option>
+        </select>
+        <p class="help-text">В ручном режиме данные проверяются только по кнопке «Обновить» в popup.</p>
+      </section>
+
+      <section class="settings-card">
+        <div class="settings-card-heading services-heading">
+          <div>
+            <h2>Отображаемые службы</h2>
+            <p>Выбрано: <strong id="selected-count">0</strong></p>
+          </div>
+          <div class="text-actions">
+            <button type="button" id="select-all" class="link-button">Выбрать все</button>
+            <button type="button" id="clear-all" class="link-button">Снять все</button>
+          </div>
+        </div>
+        <div id="catalog-status" class="help-text" role="status">Загрузка списка служб…</div>
+        <div id="component-groups" class="component-groups"></div>
+      </section>
+
+      <div class="bottom-actions">
+        <button type="submit" class="primary-button" id="save">Сохранить настройки</button>
+        <span id="saved-message" class="saved-message" role="status" aria-live="polite"></span>
+      </div>
+    </form>
+    <footer class="options-footer">
+      Статус предоставляется OpenAI для всех пользователей в агрегированном виде.
+      <a href="https://status.openai.com/" target="_blank" rel="noopener noreferrer">Открыть исходную страницу ↗</a>
+    </footer>
+  </main>
+  <script src="shared.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>
